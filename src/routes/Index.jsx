@@ -1,8 +1,17 @@
-import React from 'react'
+
+// Styles Import: 
+import "../styles/global.scss"
+
+// Components Import:
+import Header from "../components/Header"
+import ProductGrid from '../sections/ProductGrid'
 
 const Index = () => {
   return (
-    <div>Index</div>
+    <div className="page">
+      <Header />
+      <ProductGrid />
+    </div>
   )
 }
 

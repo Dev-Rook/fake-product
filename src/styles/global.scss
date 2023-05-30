@@ -1,0 +1,38 @@
+.page {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+
+  height: 100%;
+  width: 100%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 5px;
+  gap: 0px;
+  overflow-x: none;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  height: fit-content;
+  width: 1500px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .page {
+    width: 100%;
+  }
+}
