@@ -47,7 +47,7 @@ const ProductGrid = ({ category, title }) => {
             return (
               <Link
                 onClick={scrollUp}
-                to={`/product/` + value.title}
+                to={`/product/` + value.id}
                 key={value.id}
               >
                 <div className={styles.productCard}>
