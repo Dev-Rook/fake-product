@@ -7,10 +7,10 @@
     overflow: hidden;
   
     padding: 5px;
-    margin-top: 50px;
+    margin-top: 70px;
   
     height: 380px;
-    width: 100%;
+    width: 99%;
   
     .background {
       display: flex;
@@ -33,7 +33,7 @@
       z-index: 2;
       height: 100%;
       width: 100%;
-    //   background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.3);
     }
   
     .contentContainer {

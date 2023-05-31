@@ -1,0 +1,22 @@
+.sliderContainer {
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 5px;
+    gap: 10px;
+
+    justify-content: left;
+    align-items: center;
+
+    overflow: hidden;
+
+    height: fit-content;
+    width: 90%;
+
+    .swiper {
+        display: flex;
+        width: 100%;
+    }
+}

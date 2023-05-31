@@ -6,6 +6,7 @@
   align-items: center;
 
   gap: 50px;
+  padding: 5px;
 
   height: 100%;
   width: 100%;
@@ -16,21 +17,30 @@
   flex-direction: column;
 
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   overflow: hidden;
 
   padding: 5px;
-  gap: 0px;
+  gap: 20px;
   overflow-x: none;
 
   padding-top: 30px;
   padding-bottom: 30px;
 
   height: fit-content;
-  width: 1500px;
-}
+  width: 100%;
 
+  .Title {
+    font-size: 30px;
+    font-weight: 400;
+
+    display: flex;
+    align-self: flex-start;
+
+    margin-bottom: 8px;
+  }
+}
 @media only screen and (max-width: 1500px) {
   .page {
     width: 100%;

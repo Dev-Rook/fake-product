@@ -17,10 +17,8 @@ import Women from "./routes/Women";
 import Jewelry from "./routes/Jewelry";
 
 // Dynamic Routes Import:
-import Mproduct from "./dynamic-routes/Mproduct";
-import Eproduct from "./dynamic-routes/Eproduct";
-import Jproduct from "./dynamic-routes/Jproduct";
-import Wproduct from "./dynamic-routes/Wproduct";
+import Product from "./dynamic-routes/Product";
+
 
 function App() {
   return (
@@ -37,10 +35,7 @@ function App() {
           <Route path={"/women"} element={<Women />} />
           <Route path={"/jewelry"} element={<Jewelry />} />
           {/* Dynamic Routes */}
-          <Route path={"/mproduct/:id"} element={<Mproduct />} />
-          <Route path={"/eproduct/:id"} element={<Eproduct />} />
-          <Route path={"/wproduct/:id"} element={<Wproduct />} />
-          <Route path={"/jproduct/:id"} element={<Jproduct />} />
+          <Route path={"/product/:id"} element={<Product />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -5,16 +5,21 @@ import useAxios from "../hooks/useAxios";
 import useScrollUp from "../hooks/useScrollUp";
 
 // Styles Import:
-import "../styles/global.scss"
+import "../styles/global.scss";
 import styles from "../styles/sec-styles/productGrid.module.scss";
 
 // Loaders Import:
 import ScaleLoader from "react-spinners/ScaleLoader";
 
-const ProductGrid = () => {
-  const url = `https://fakestoreapi.com/products/category/electronics`;
+// Material UI Import:
+// import StartIcon from "@mui/icons-material/Start";
+
+const ProductGrid = ({ category, title }) => {
+  const url = `https://fakestoreapi.com/products/category/${category}`;
   const { data, error, loading } = useAxios(url);
   const { scrollUp } = useScrollUp();
+
+  // const [search, setSearch] = useState()
 
   const override = {
     display: "block",
@@ -24,6 +29,7 @@ const ProductGrid = () => {
 
   return (
     <div className="section">
+      <p className={styles.gridTitle}>{title}</p>
       {loading ? (
         <ScaleLoader
           color={"red"}
@@ -36,37 +42,34 @@ const ProductGrid = () => {
       ) : error ? (
         <p>{error}</p>
       ) : (
-        <>
-          <div className={styles.Content_Container}>
-            {data?.map((value) => {
-              return (
-                <div className={styles.Video_Card} key={value.id}>
-                  <div className={styles.Image_Container}>
-                    <img src={value.image} alt="" className={styles.Image} />
-                  </div>
-
-                  <div className={styles.TitleContainer}>
-                    <p className={styles.Video_Title}>{value.title.slice(0, 30)}....</p>
-                  </div>
-                  <p className={styles.Description}>{value.description.slice(0, 90)}....</p>
-                </div>
-              );
-            })}
-          </div>
-          {/* {data?.map((value) => {
+        <div className={styles.productGrid}>
+          {data?.map((value) => {
             return (
               <Link
                 onClick={scrollUp}
-                to={`/product/` + value.id}
+                to={`/product/` + value.title}
                 key={value.id}
               >
-                <p>{value.id}</p>
-                <p>{value.title}</p>
+                <div className={styles.productCard}>
+                  <div className={styles.imageContainer}>
+                    <img src={value.image} alt="" className={styles.image} />
+                  </div>
+                  <div className={styles.productDetailsContainer}>
+                    <p className={styles.title}>{value?.title.slice(0, 20)}</p>
+                    <p className={styles.price}>${value?.price}</p>
+                  </div>
+                </div>
               </Link>
             );
-          })} */}
-        </>
+          })}
+        </div>
       )}
+      {/* <div className={styles.CallToActionBox}>
+        <Link to={"/services"} onClick={scrollUp}>
+          <button className={styles.View_Button}>Vew All</button>
+        </Link>
+        <StartIcon sx={{ color: "black", fontSize: 25 }} />
+      </div> */}
     </div>
   );
 };
