@@ -19,7 +19,7 @@ import {
 } from "../redux/reducers/counter";
 
 // Components Import:
-// import ProductGrid from "../sections/ProductGrid";
+import ProductGrid from "../sections/ProductGrid";
 
 const Product = () => {
   const { id } = useParams();
@@ -72,7 +72,6 @@ const Product = () => {
           </button>
         </div>
         </div>
-
       </div>
     </div>
   );
