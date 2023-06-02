@@ -17,6 +17,7 @@ import Women from "./routes/Women";
 import Jewelry from "./routes/Jewelry";
 
 // Dynamic Routes Import:
+import Category from "./dynamic-routes/Category";
 import Product from "./dynamic-routes/Product";
 
 
@@ -36,6 +37,7 @@ function App() {
           <Route path={"/jewelry"} element={<Jewelry />} />
           {/* Dynamic Routes */}
           <Route path={"/product/:id"} element={<Product />} />
+          <Route path={"/category/:id"} element={<Category />} />
         </Routes>
         <Footer />
       </BrowserRouter>

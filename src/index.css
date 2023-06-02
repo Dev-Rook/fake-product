@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Rajdhani:wght@500&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+
 a {
   text-decoration: none;
   color: black;
@@ -31,9 +33,7 @@ ul {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Nunito', sans-serif;
   /* background-color: rgb(240, 231, 219); */
   /* background-color: #242424; */
   background-color: #fff7ed;

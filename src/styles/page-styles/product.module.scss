@@ -56,7 +56,6 @@
       width: 100%;
 
       .title {
-        font-family: sans-serif;
         font-weight: 400;
         font-size: 18px;
       }
@@ -64,7 +63,6 @@
 
     .descreption {
       font-size: 15px;
-      font-family: sans-serif;
       text-align: left;
     }
 
@@ -90,7 +88,7 @@
         }
 
         .controls {
-            cursor: pointer;
+          cursor: pointer;
           border: 1px solid black;
           padding: 5px 10px;
         }

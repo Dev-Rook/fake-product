@@ -12,7 +12,7 @@ import styles from "../styles/sec-styles/productGrid.module.scss";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
 // Material UI Import:
-// import StartIcon from "@mui/icons-material/Start";
+import StartIcon from "@mui/icons-material/Start";
 
 const ProductGrid = ({ category, title }) => {
   const url = `https://fakestoreapi.com/products/category/${category}`;
@@ -43,7 +43,7 @@ const ProductGrid = ({ category, title }) => {
         <p>{error}</p>
       ) : (
         <div className={styles.productGrid}>
-          {data?.map((value) => {
+          {data?.slice(0, 3).map((value) => {
             return (
               <Link
                 onClick={scrollUp}
@@ -56,7 +56,12 @@ const ProductGrid = ({ category, title }) => {
                   </div>
                   <div className={styles.productDetailsContainer}>
                     <p className={styles.title}>{value?.title.slice(0, 20)}</p>
-                    <p className={styles.price}>${value?.price}</p>
+                    <p className={styles.description}>{value?.description.slice(0, 100)}</p>
+                    <p className={styles.price}>USD ${value?.price}</p>
+                  </div>
+                  <div className={styles.actionBox}>
+                    <button className={styles.cart}>Add To Cart</button>
+                    <button className={styles.buy}>More</button>
                   </div>
                 </div>
               </Link>
@@ -64,12 +69,11 @@ const ProductGrid = ({ category, title }) => {
           })}
         </div>
       )}
-      {/* <div className={styles.CallToActionBox}>
-        <Link to={"/services"} onClick={scrollUp}>
+      <div className={styles.CallToActionBox}>
+        <Link to={`/category/${category}`} onClick={scrollUp}>
           <button className={styles.View_Button}>Vew All</button>
         </Link>
-        <StartIcon sx={{ color: "black", fontSize: 25 }} />
-      </div> */}
+      </div>
     </div>
   );
 };
