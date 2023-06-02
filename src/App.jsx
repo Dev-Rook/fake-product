@@ -1,4 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";4
+import { useContext } from "react";
+
+// Context Import:
+import { UrlContext } from "./context/UrlContext";
 
 // Styles Import:
 import "./app.scss";
@@ -20,7 +24,6 @@ import Jewelry from "./routes/Jewelry";
 import Category from "./dynamic-routes/Category";
 import Product from "./dynamic-routes/Product";
 
-
 function App() {
   return (
     <div className="app">
@@ -31,13 +34,15 @@ function App() {
           <Route path={"/"} element={<Index />} />
           <Route path={"/profile"} element={<Profile />} />
           <Route path={"/login"} element={<Login />} />
-          <Route path={"/men"} element={<Men />} />
+          <Route path={"/men's clothing"} element={<Men />} />
           <Route path={"/electronics"} element={<Electronics />} />
           <Route path={"/women"} element={<Women />} />
-          <Route path={"/jewelry"} element={<Jewelry />} />
+          <Route path={"/jewelry"} element={<Jewelry />} /> */}
           {/* Dynamic Routes */}
           <Route path={"/product/:id"} element={<Product />} />
-          <Route path={"/category/:id"} element={<Category />} />
+          {/* <UrlContext.Provider value={{ category }}> */}
+            <Route path={"/category/:id"} element={<Category />} />
+          {/* </UrlContext.Provider> */}
         </Routes>
         <Footer />
       </BrowserRouter>

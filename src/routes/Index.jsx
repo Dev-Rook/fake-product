@@ -11,7 +11,7 @@ const Index = () => {
   // const category = `electronics`
   return (
     <div className="page">
-      <Header />
+      <Header title={"Shop"} />
       <ProductSlider />
       <ProductGrid category={"electronics"} title={"Electronics"} />
       <ProductGrid category={"men's clothing"} title={"Mens Wear"} />

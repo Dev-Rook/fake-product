@@ -70,7 +70,7 @@ const ProductGrid = ({ category, title }) => {
         </div>
       )}
       <div className={styles.CallToActionBox}>
-        <Link to={`/category/${category}`} onClick={scrollUp}>
+        <Link to={`/${category}`} onClick={scrollUp}>
           <button className={styles.View_Button}>Vew All</button>
         </Link>
       </div>

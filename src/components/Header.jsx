@@ -6,7 +6,7 @@ import styles from "../styles/comp-styles/header.module.scss"
 // Media Import:
 const video = "video"
 
-const Header = () => {
+const Header = ({title}) => {
   return (
     <div className={styles.header}>
       <div className={styles.background}>
@@ -22,7 +22,7 @@ const Header = () => {
       </div>
       <div className={styles.diffuser}></div>
       <div className={styles.contentContainer}>
-        <h1 className={styles.title}>Shop</h1>
+        <h1 className={styles.title}>{title}</h1>
       </div>
     </div>
   )
