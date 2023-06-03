@@ -18,7 +18,7 @@ import Login from "./routes/Login";
 import Men from "./routes/Men";
 import Electronics from "./routes/Electronics";
 import Women from "./routes/Women";
-import Jewelry from "./routes/Jewelry";
+import Jewelery from "./routes/Jewelery";
 
 // Dynamic Routes Import:
 import Category from "./dynamic-routes/Category";
@@ -36,8 +36,8 @@ function App() {
           <Route path={"/login"} element={<Login />} />
           <Route path={"/men's clothing"} element={<Men />} />
           <Route path={"/electronics"} element={<Electronics />} />
-          <Route path={"/women"} element={<Women />} />
-          <Route path={"/jewelry"} element={<Jewelry />} /> */}
+          <Route path={"/women's clothing"} element={<Women />} />
+          <Route path={"/jewelery"} element={<Jewelery />} /> */}
           {/* Dynamic Routes */}
           <Route path={"/product/:id"} element={<Product />} />
           {/* <UrlContext.Provider value={{ category }}> */}

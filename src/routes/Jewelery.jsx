@@ -14,8 +14,8 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 // Components Import:
 import Header from "../components/Header";
 
-const Men = () => {
-  const category = "men's clothing";
+const Jewelery = () => {
+  const category = "jewelery";
   const url = `https://fakestoreapi.com/products/category/${category}`;
   const { data, error, loading } = useAxios(url);
   const { scrollUp } = useScrollUp();
@@ -28,7 +28,7 @@ const Men = () => {
 
   return (
     <div className="page">
-      <Header title={"Men"} />
+      <Header title={"Jewelery"} />
       <div className="section">
         {loading ? (
           <ScaleLoader
@@ -47,7 +47,7 @@ const Men = () => {
               return (
                 <Link
                   onClick={scrollUp}
-                  to={`/product/` + value.title}
+                  to={`/product/` + value.id}
                   key={value.id}
                 >
                   <div className={styles.productCard}>
@@ -78,4 +78,4 @@ const Men = () => {
   );
 };
 
-export default Men;
+export default Jewelery;

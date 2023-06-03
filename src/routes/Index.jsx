@@ -16,6 +16,7 @@ const Index = () => {
       <ProductGrid category={"electronics"} title={"Electronics"} />
       <ProductGrid category={"men's clothing"} title={"Mens Wear"} />
       <ProductGrid category={"women's clothing"} title={"Women's Wear"} />
+      <ProductGrid category={"jewelery"} title={"Jewelery"} />
     </div>
   );
 };
